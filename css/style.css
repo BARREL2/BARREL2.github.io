@@ -1287,6 +1287,11 @@ pre .javascript .function {
     color: #fff;
   }
 }
+.author-img {
+  width: 70%;
+  border-radius: 1em;
+  border: 0.2em solid #999;
+}
 @media screen and (min-width: 768px) {
   #sidebar {
     display: inline;
