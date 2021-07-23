@@ -829,3 +829,7 @@ pre .deletion {
   margin: auto;
   border-radius: 50%;
 }
+.about-main {
+  padding-left: 10px;
+  font-weight: bold;
+}
