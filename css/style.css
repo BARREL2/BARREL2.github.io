@@ -1288,8 +1288,8 @@ pre .javascript .function {
   }
 }
 .author-img {
-  width: 70%;
-  border-radius: 1em;
+  align: center;
+  border-radius: 50%;
   border: 0.2em solid #999;
 }
 @media screen and (min-width: 768px) {
