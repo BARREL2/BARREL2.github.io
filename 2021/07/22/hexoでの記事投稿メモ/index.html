@@ -14,7 +14,7 @@
 <meta property="og:description" content="hexoで記事を投稿するためのコマンドなど hexo new (post) 新規記事タイトル マークダウンで記事を書く サーバーを立ち上げて確認   hexo clean hexo deploy -g  上記の3点をコマンドプロンプトで実行するよ良い感じになる。それぞれもうちょっと詳しく見ていく">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2021-07-22T06:45:07.000Z">
-<meta property="article:modified_time" content="2021-07-23T11:45:30.359Z">
+<meta property="article:modified_time" content="2021-07-23T14:14:51.555Z">
 <meta property="article:author" content="BARREL2">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -120,7 +120,7 @@
 <p>または hexo s と省略可能<br>[<a href="http://localhost:4000]">http://localhost:4000]</a>(<a href="http://localhost:4000）にアクセスして確認する。">http://localhost:4000）にアクセスして確認する。</a></p>
 <h2 id="2-hexo-clean"><a href="#2-hexo-clean" class="headerlink" title="2.hexo clean"></a>2.hexo clean</h2><p>記事ができたら一度コンテンツのキャッシュクリアを行う<br>これを行わないとトップページの記事一覧に出ないなどの影響がある</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<p>newとセットで覚えておくとヨシ。→</p>
+<p>HTMLキャッシュを削除しない場合はスキップしてもOKっぽい？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></table></figure>
 <p>が出ればOK</p>
 <h2 id="3-hexo-deply-g"><a href="#3-hexo-deply-g" class="headerlink" title="3.hexo deply -g"></a>3.hexo deply -g</h2><p>.mdから静的ファイルを生成すし、デプロイまで一括で行うコマンド。<br>分解すると「hexo generate」と「hexo deploy」になる。</p>
@@ -206,10 +206,6 @@
     <h3 class="widget-title">最近の投稿</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2021/07/23/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/2021/07/22/hexo-pic-up/">hexoで作った投稿記事に画像を載せる</a>
