@@ -6,12 +6,10 @@
   <title>hexoで作った投稿記事に画像を載せる | BARREL blog</title>
   <meta name="author" content="BARREL2">
   
-  <meta name="description" content="## 画像を載せる前に「設定」
-下記記事を~~パク~~参考にして、投稿記事に画像を掲載してみる。
-
+  <meta name="description" content="画像を載せる前に「設定」下記を参考しにしてやってみます。
 HEXOを使ってブログを構築しました。 その1
-ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行う。今回は記事ごとにフォルダを生成するオプションをONにしてみる。
-オプションは35～45行目あたりにある「post_asset_folder: ****」をtrueにする。falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書く。">
+ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行います。今回は記事ごとにフォルダを生成するオプションをONにしてみます。
+オプションは35～45行目あたりにある「post_asset_folder: ****」をtrueに。falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書きます">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -68,23 +66,23 @@ HEXOを使ってブログを構築しました。 その1
     <div class="e-content entry" itemprop="articleBody">
       
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-## 画像を載せる前に「設定」
-下記記事を~~パク~~参考にして、投稿記事に画像を掲載してみる。
 
+<h2 id="画像を載せる前に「設定」"><a href="#画像を載せる前に「設定」" class="headerlink" title="画像を載せる前に「設定」"></a>画像を載せる前に「設定」</h2><p>下記を参考しにしてやってみます。</p>
 <p><a target="_blank" rel="noopener" href="http://magazine.a-n-t.jp/2017/08/blog-hexo-1/">HEXOを使ってブログを構築しました。 その1</a></p>
-<p>ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行う。<br>今回は記事ごとにフォルダを生成するオプションをONにしてみる。</p>
-<p>オプションは35～45行目あたりにある<font color="red">「post_asset_folder: ****」</font>を<b>true</b>にする。<br>falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書く。</p>
+<p>ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行います。<br>今回は記事ごとにフォルダを生成するオプションをONにしてみます。</p>
+<p>オプションは35～45行目あたりにある<font color="red">「post_asset_folder: ****」</font>を<b>true</b>に。<br>falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書きます</p>
 <span id="more"></span>
 
 <div class="text-4xl text-green-700 text-center font-semibold">・・・・・・・・ちょっと待ったァ！</div>
 フォルダが増えまくって大変になってしまうので、やっぱりfalseのまま使うように変更。
 
-<h2 id="途中で使いづらさに気づく"><a href="#途中で使いづらさに気づく" class="headerlink" title="途中で使いづらさに気づく"></a>途中で使いづらさに気づく</h2><p>記事ごとにフォルダがどんどん生成されてしまうため、source内に.mdと画像用フォルダがめちゃくちゃに増えてしまう。<br>そんなに多用するものでもないと思うのでpost_asset_folderはデフォルトのfalseで運用する。</p>
-<p>source下にimagesフォルダを作成して画像を突っ込んでおく。画像をはるたびに指定する手間はあるものの、フォルダが増えすぎてVSCODEが使いづらくなるのを防ぐ・・・つもり。効果があるかはわからない…(‘ω’)・・・</p>
-<p><img src="/images/ss2021-07-22-181200.jpg" alt="画像貼り付け"></p>
-<p>ディレクトリ構造やファイル名で沼にハマってしまい、画像の表示だけでえげつない数のコミットが・・・</p>
-<p>(‘ω’)・・・<br>（途中で投げ出しそうになりながら、もうコメントもいいやと半分ヤケになっていたのは反省）<br><img src="/images/ss2021-07-22-192215.jpg" alt="奮闘する様子"></p>
-<p>なにはともあれ、画像を貼り付けることができた。一件落着。(‘ω’)b</p>
+
+<h2 id="途中で使いづらさに気づく"><a href="#途中で使いづらさに気づく" class="headerlink" title="途中で使いづらさに気づく"></a>途中で使いづらさに気づく</h2><p>記事ごとにフォルダがどんどん生成されてしまうため、source内に.mdと画像用フォルダがめちゃくちゃに増えてしまいます。<br>そんなに多用するものでもないと思うのでpost_asset_folderはデフォルトのfalseで運用します。</p>
+<p>source下にimagesフォルダを作成して画像を突っ込んでおきます。<br>画像をはるたびに指定する手間はあるものの、フォルダが増えすぎてVSCODEが使いづらくなるのを防ぐ・・・はず・・・。</p>
+<p>画像の貼り付けてみます。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![画像貼り付け](/images/gazo-test.jpg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/gazo-test.jpg" alt="画像貼り付け"></p>
 
       
     </div>
@@ -175,9 +173,7 @@ HEXOを使ってブログを構築しました。 その1
   
     <li><a href="/tags/git/">git</a><small>1</small></li>
   
-    <li><a href="/tags/hexo/">hexo</a><small>2</small></li>
-  
-    <li><a href="/tags/hexot/">hexot</a><small>1</small></li>
+    <li><a href="/tags/hexo/">hexo</a><small>3</small></li>
   
     <li><a href="/tags/tailwindcss/">tailwindcss</a><small>1</small></li>
   
