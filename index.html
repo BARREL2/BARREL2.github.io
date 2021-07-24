@@ -68,36 +68,14 @@
 本記事もバリバリTailWindCssが効いているはずです。
 
 <p><a target="_blank" rel="noopener" href="https://qiita.com/Masahiro111/items/62a4927be42a8c06bc79">参考サイト</a></p>
-<p>!&lt;– more–&gt;</p>
-<p>hexoでブログを書く時、cleanやgenerateを多用して静的コンテンツの再構成を頻繁に行うようになりました。<br>githubに上がっているpublicフォルダは都度生成され、cleanする度に中身は削除されています。</p>
-<p>そんな訳で生成の度に削除されず、かつ、CSSの有効範囲に入らなければならない状態なのです。</p>
-<p>参考サイトをもとに、まずはnpm経由でルートフォルダにインストールします。</p>
-<blockquote>
-<p>npm install tailwindcss@latest postcss@latest autoprefixer@latest<br>（残りのコマンドは割愛します）</p>
-</blockquote>
-<div class="text-red-600">ここでの注意点としては、npm経由でインストールしただけの状態では`index.html`には反映されても、個別記事内では反映されていません。</div>
-
-<h2 id="インストール版とCDN版を併用する"><a href="#インストール版とCDN版を併用する" class="headerlink" title="インストール版とCDN版を併用する"></a>インストール版とCDN版を併用する</h2><p>ゴリ押し以外の何者でもないのが心苦しいですが、トップページにはインストール版で適用します。<br>個別記事には<code>.md</code>の上の方にリンクを書いておくと適用されます。</p>
-<p>とはいえ、毎回コピペするのは七面倒臭くスマートではない（？）気がするので、ここをなんとかしてみます。</p>
-<h2 id="記事テンプレートファイルをいじる"><a href="#記事テンプレートファイルをいじる" class="headerlink" title="記事テンプレートファイルをいじる"></a>記事テンプレートファイルをいじる</h2><p>hexoで作ったファイルの中に<code>scaffolds</code>ディレクトリがあります。この中の<code>post</code>、<code>page</code>、<code>draft</code>は<code>hexo new</code>のときに呼ばれる引数のことです。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new (post) new-post</span><br></pre></td></tr></table></figure>
-<p>ターミナルからnewコマンドで新規ファイルを生成するとそれぞれが参照されて初期値に付与してくれます。</p>
-<p>post.md</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>post.mdの中身にCDN版のTailWindCssを設置したら完成です。</p>
-<h2 id="なぜこのような半端っぽい作業内容になったのか"><a href="#なぜこのような半端っぽい作業内容になったのか" class="headerlink" title="なぜこのような半端っぽい作業内容になったのか"></a>なぜこのような半端っぽい作業内容になったのか</h2><p>hexoで使われているソースを見てみると、CSSではなく<code>styl</code>拡張子のSASSで記述されています。<br>CSSというSASSはほとんど似たようなものみたいですが、記述方法が違い互換性がありません。</p>
-<p>SASSではCSSで使っている｛｝が存在せず、インデントのみで階層構造が作られています。<br>javaとPythonみたいな差のイメージです。（あくまでイメージ）</p>
-<p>よって、当初はTailWindCssをそのままそっくりSASSで書いてやればいいんじゃないか？と奮闘しましたが…</p>
-<div class="text-gray-500">約19000行あることに気づき諦めましたOrz</div>
-
-<p>SASSはブログ全体のパーツとして使われているため、ウィジェットを作ったりその他カスタマイズする際に必須になってきます。<br>一応？作り方というか、使い方を”ちょっとだけ”把握できたのでややレベルアップです。</p>
-<p>ウィジェットの作成についてはまた今度やるかもしれません。</p>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2021/07/24/hexo-tailwind-cdn/#more" class="more-link">Read More</a>
+          </div>
         
         
       
