@@ -101,6 +101,9 @@ a:hover {
     margin-right: 0;
   }
 }
+#twitterShare {
+  text-color: #fff;
+}
 #header {
   text-shadow: 0 0 1px #fff;
   margin: 50px auto;
@@ -832,4 +835,7 @@ pre .deletion {
 .about-main {
   padding-left: 10px;
   font-weight: bold;
+}
+#twitterShare {
+  text-color: #fff;
 }
