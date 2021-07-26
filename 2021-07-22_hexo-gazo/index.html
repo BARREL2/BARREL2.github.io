@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Commitメッセージ癖をつける | BARREL blog</title>
+  <title>hexoで作った投稿記事に画像を載せる | BARREL blog</title>
   <meta name="author" content="BARREL2">
   
-  <meta name="description" content="gitを使用する際はCommitメッセージを残す癖をつけるgitについて調べている時に目にしたものGitのコミットメッセージの書き方コミットメッセージをつけよう、というもの。">
+  <meta name="description" content="画像を載せる前に「設定」下記を参考しにしてやってみます。
+HEXOを使ってブログを構築しました。 その1
+ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行います。今回は記事ごとにフォルダを生成するオプションをONにしてみます。
+オプションは35～45行目あたりにある「post_asset_folder: ****」をtrueに。falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書きます">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Commitメッセージ癖をつける"/>
+  <meta property="og:title" content="hexoで作った投稿記事に画像を載せる"/>
   <meta property="og:site_name" content="BARREL blog"/>
 
   
@@ -46,38 +49,40 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-Commitメッセージ癖をつける" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-2021-07-22_hexo-gazo" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time class="dt-published" datetime="2021-07-22T08:39:57.000Z"><a href="/2021/07/22/Commit%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E7%99%96%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B/">2021-07-22</a></time>
+        <time class="dt-published" datetime="2021-07-22T09:11:39.000Z"><a href="/2021-07-22_hexo-gazo/">2021-07-22</a></time>
       
       
   
-    <h1 class="p-name title" itemprop="headline name">Commitメッセージ癖をつける</h1>
+    <h1 class="p-name title" itemprop="headline name">hexoで作った投稿記事に画像を載せる</h1>
   
 
     </header>
     <div class="e-content entry" itemprop="articleBody">
       
-        <h2 id="gitを使用する際はCommitメッセージを残す癖をつける"><a href="#gitを使用する際はCommitメッセージを残す癖をつける" class="headerlink" title="gitを使用する際はCommitメッセージを残す癖をつける"></a>gitを使用する際はCommitメッセージを残す癖をつける</h2><p>gitについて調べている時に目にしたもの<br><a target="_blank" rel="noopener" href="https://qiita.com/itosho/items/9565c6ad2ffc24c09364">Gitのコミットメッセージの書き方</a><br>コミットメッセージをつけよう、というもの。</p>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<h2 id="画像を載せる前に「設定」"><a href="#画像を載せる前に「設定」" class="headerlink" title="画像を載せる前に「設定」"></a>画像を載せる前に「設定」</h2><p>下記を参考しにしてやってみます。</p>
+<p><a target="_blank" rel="noopener" href="http://magazine.a-n-t.jp/2017/08/blog-hexo-1/">HEXOを使ってブログを構築しました。 その1</a></p>
+<p>ファイルパスを書く前に、記事ごとにフォルダを作るかどうかの設定を行います。<br>今回は記事ごとにフォルダを生成するオプションをONにしてみます。</p>
+<p>オプションは35～45行目あたりにある<font color="red">「post_asset_folder: ****」</font>を<b>true</b>に。<br>falseの場合はimagesフォルダに入り、相対パスでURLの表記と同じように書きます</p>
 <span id="more"></span>
-<blockquote>
-<p>原則<br>以下のフォーマットとします。</p>
-<p>1行目：変更内容の要約（タイトル、概要）<br>2行目 ：空行<br>3行目以降：変更した理由（内容、詳細）</p>
-<p>日本語でも英語でもOKですが、リポジトリで統一してください。</p>
-</blockquote>
-<p>とのこと。このブログを作成した時は、特にコメントをつけていなかったので<br>今後はコミット時にコメントをつけるように心がける。というか、する。</p>
-<p>コミットメッセージには細かい種類分けがいくつもある。使わないと覚えないので、できるだけ使っていく。</p>
-<blockquote>
-<p>通常版<br>fix：バグ修正<br>hotfix：クリティカルなバグ修正<br>add：新規（ファイル）機能追加<br>update：機能修正（バグではない）<br>change：仕様変更<br>clean：整理（リファクタリング等）<br>disable：無効化（コメントアウト等）<br>remove：削除（ファイル）<br>upgrade：バージョンアップ<br>revert：変更取り消し<br>（2014年12月17日追記）<br>コミットが種別が多すぎて、運用が大変そうというコメントがありましたので、ライト版を考えてみました。</p>
-<p>ライト版<br>fix：バグ修正<br>add：新規（ファイル）機能追加<br>update：機能修正（バグではない）<br>remove：削除（ファイル）</p>
-</blockquote>
-<p>確かに、多い(‘ω’)・・・規模が大きく、複数人で扱うようになったら使っていくかもしれない。<br>基本的に現状の開発はソロではあるものの使うときは使うようにする。</p>
-<p>というわけで、早速この投稿記事でコミットメッセージを使ってみる練習をする。</p>
-<h2 id="2021-07-22-18時01分-追記"><a href="#2021-07-22-18時01分-追記" class="headerlink" title="(2021-07-22　18時01分　追記)"></a>(2021-07-22　18時01分　追記)</h2><p>サイト全体を再構築するとGithub上ではsite updated…（日付）と出てしまうため、本来の主旨とは違う形になってしまった。<br>一応、VS Codeでの編集履歴にコメントが残るので、癖をつけるぶんには役立つと思う。<br>Githubのコメントで残したかったとはいえ、コミット時にはこういうものがあるんだなという認識を持てたのでヨシ！とする。</p>
+
+<div class="text-4xl text-green-700 text-center font-semibold">・・・・・・・・ちょっと待ったァ！</div>
+フォルダが増えまくって大変になってしまうので、やっぱりfalseのまま使うように変更。
+
+
+<h2 id="途中で使いづらさに気づく"><a href="#途中で使いづらさに気づく" class="headerlink" title="途中で使いづらさに気づく"></a>途中で使いづらさに気づく</h2><p>記事ごとにフォルダがどんどん生成されてしまうため、source内に.mdと画像用フォルダがめちゃくちゃに増えてしまいます。<br>そんなに多用するものでもないと思うのでpost_asset_folderはデフォルトのfalseで運用します。</p>
+<p>source下にimagesフォルダを作成して画像を突っ込んでおきます。<br>画像をはるたびに指定する手間はあるものの、フォルダが増えすぎてVSCODEが使いづらくなるのを防ぐ・・・はず・・・。</p>
+<p>画像の貼り付けてみます。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![画像貼り付け](/images/gazo-test.jpg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/gazo-test.jpg" alt="画像貼り付け"></p>
 
       
     </div>
@@ -87,7 +92,7 @@
         
   
   <div class="tags">
-    <a href="/tags/git/">git</a>
+    <a href="/tags/hexo/">hexo</a>
   </div>
 
         
@@ -131,7 +136,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="https://barrel2.github.io/2021/07/22/Commit%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E7%99%96%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="https://barrel2.github.io/2021-07-22_hexo-gazo/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
